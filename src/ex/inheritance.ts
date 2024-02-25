@@ -12,6 +12,14 @@ export class Animal  {
     }
 }
 export class Dog extends Animal {
+
+    constructor (
+        public name: string,
+        public owner: string,
+    ) {
+        super(name);
+    }
+
     woof (times: number) {
         for (let index = 0; index < times; index++) {
             console.log('Woof!!');
@@ -23,7 +31,6 @@ export class Dog extends Animal {
 const fifi = new  Animal('fifi');
 fifi.move();
 
-const cheis = new Dog ('cheis');
-cheis.move();
-
+const cheis = new Dog ('cheis', 'Owner');
+cheis.move(); 
 cheis.woof(6);
